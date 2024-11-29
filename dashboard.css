@@ -1,136 +1,129 @@
-/* Style général */
+/* Styles généraux */
 body {
-    margin: 0;
     font-family: Arial, sans-serif;
-    background: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #4a90e2, #002f6c);
+    color: #fff;
 }
 
-/* Conteneur principal */
-.container {
-    width: 100%;
-    max-width: 500px;
-    margin: 0 auto;
-    text-align: center;
-    background: white;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* Barre du haut */
 header {
+    background-color: #002f6c;
+    padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    background: #0a2463;
-    color: white;
 }
 
 .logo {
+    width: 40px;
     height: 40px;
+    border-radius: 50%;
 }
 
-.menu-toggle {
+.menu-icon {
+    font-size: 24px;
     cursor: pointer;
-}
-
-.menu-toggle .bar {
-    width: 25px;
-    height: 3px;
-    background: white;
-    margin: 4px 0;
+    color: #fff;
 }
 
 /* Menu déroulant */
-#dropdown-menu {
-    background: #0a2463;
-    color: white;
+nav {
+    display: none;
     position: absolute;
     top: 60px;
-    right: 0;
-    width: 200px;
-    text-align: left;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    z-index: 10;
-    display: none;
+    right: 20px;
+    background-color: #003b8b;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-#dropdown-menu ul {
+nav.show {
+    display: block;
+}
+
+nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-#dropdown-menu li {
-    padding: 10px 20px;
+nav ul li {
+    margin: 10px 0;
 }
 
-#dropdown-menu li a {
-    color: white;
+nav ul li a {
+    color: #fff;
     text-decoration: none;
+    font-size: 16px;
+    display: block;
 }
 
-#dropdown-menu li a:hover {
-    text-decoration: underline;
+/* Contenu principal */
+main {
+    text-align: center;
+    margin-top: 50px;
+}
+
+main h1 {
+    font-size: 28px;
+    margin-bottom: 30px;
 }
 
 /* Sections */
-main {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    gap: 10px;
-    padding: 10px;
-}
-
-/* Chaque section cliquable */
-.section {
-    position: relative;
-    border-radius: 10px;
-    overflow: hidden;
-    cursor: pointer;
-    height: 150px;
+.sections-container {
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
     justify-content: center;
-    background-size: cover;
-    background-position: center;
+    gap: 20px;
+    padding: 0 20px;
 }
 
-#section1 {
-    background-image: url('capsule1-bg.jpg');
-}
-
-#section2 {
-    background-image: url('capsule2-bg.jpg');
-}
-
-#section3 {
-    background-image: url('capsule3-bg.jpg');
-}
-
-/* Superposition du texte */
-.overlay {
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
+.section {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 20px;
+    width: 250px;
     text-align: center;
-    padding: 10px;
-    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.overlay h2 {
-    margin: 0;
-    font-size: 18px;
+.section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
 }
 
-.overlay p {
-    margin: 5px 0 0;
-    font-size: 14px;
+.section h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #fff;
 }
 
-/* Section large pour "Capsule 1" */
-#section1 {
-    grid-column: span 2;
-    height: 200px;
+.section .button {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 20px;
+    background-color: #005bb5;
+    color: #fff;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.section .button:hover {
+    background-color: #003f7f;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .sections-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section {
+        width: 80%;
+    }
 }
