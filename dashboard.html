@@ -1,0 +1,136 @@
+/* Style général */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f0f0f0;
+}
+
+/* Conteneur principal */
+.container {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Barre du haut */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: #0a2463;
+    color: white;
+}
+
+.logo {
+    height: 40px;
+}
+
+.menu-toggle {
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 4px 0;
+}
+
+/* Menu déroulant */
+#dropdown-menu {
+    background: #0a2463;
+    color: white;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    text-align: left;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    display: none;
+}
+
+#dropdown-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#dropdown-menu li {
+    padding: 10px 20px;
+}
+
+#dropdown-menu li a {
+    color: white;
+    text-decoration: none;
+}
+
+#dropdown-menu li a:hover {
+    text-decoration: underline;
+}
+
+/* Sections */
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 10px;
+    padding: 10px;
+}
+
+/* Chaque section cliquable */
+.section {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+}
+
+#section1 {
+    background-image: url('capsule1-bg.jpg');
+}
+
+#section2 {
+    background-image: url('capsule2-bg.jpg');
+}
+
+#section3 {
+    background-image: url('capsule3-bg.jpg');
+}
+
+/* Superposition du texte */
+.overlay {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.overlay h2 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.overlay p {
+    margin: 5px 0 0;
+    font-size: 14px;
+}
+
+/* Section large pour "Capsule 1" */
+#section1 {
+    grid-column: span 2;
+    height: 200px;
+}
