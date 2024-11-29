@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carottes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="header">
+    <img src="user-icon.png" alt="Utilisateur">
+    <img src="menu-icon.png" alt="Menu">
+  </div>
+
+  <div class="content">
+    <div class="title">
+      <img src="carrot-icon.png" alt="Carottes">
+      <h1>CAROTTES</h1>
+    </div>
+
+    <div class="icons-container">
+      <div class="icon" id="water">
+        <img src="water-icon.png" alt="Eau">
+        <p>96%</p>
+      </div>
+      <div class="icon" id="light">
+        <img src="light-icon.png" alt="Lumière">
+        <p>96%</p>
+      </div>
+      <div class="icon" id="temperature">
+        <img src="temperature-icon.png" alt="Température">
+        <p>96%</p>
+      </div>
+    </div>
+
+    <div class="settings" id="settings">
+      <p id="current-value"></p>
+      <p id="ideal-value"></p>
+      <button id="decrease">-</button>
+      <button id="increase">+</button>
+    </div>
+
+    <video controls>
+      <source src="your-video.mp4" type="video/mp4">
+      Votre navigateur ne supporte pas la lecture vidéo.
+    </video>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
