@@ -1,7 +1,18 @@
-// Gérer l'affichage du menu déroulant
-const menuToggle = document.getElementById("menu-toggle");
-const dropdownMenu = document.getElementById("dropdown-menu");
+// Gestion du menu déroulant
+document.addEventListener("DOMContentLoaded", () => {
+    const menuIcon = document.querySelector(".menu-icon");
+    const navMenu = document.querySelector("nav");
 
-menuToggle.addEventListener("click", () => {
-    dropdownMenu.classList.toggle("hidden");
+    // Événement pour ouvrir/fermer le menu
+    menuIcon.addEventListener("click", () => {
+        navMenu.classList.toggle("show");
+    });
+
+    // Fermer le menu lorsqu'un lien est cliqué
+    const menuLinks = document.querySelectorAll("nav ul li a");
+    menuLinks.forEach(link => {
+        link.addEventListener("click", () => {
+            navMenu.classList.remove("show");
+        });
+    });
 });
