@@ -1,0 +1,126 @@
+/* Styles généraux */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #003366;
+    color: white;
+}
+
+/* Header */
+header {
+    background-color: #00254d;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.menu-icon {
+    width: 30px;
+    height: 20px;
+    background: white;
+    mask: url('menu-icon.svg') no-repeat center;
+    -webkit-mask: url('menu-icon.svg') no-repeat center;
+    cursor: pointer;
+}
+
+/* Menu déroulant */
+nav {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background-color: #00254d;
+    border: 1px solid #004080;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    border-bottom: 1px solid #004080;
+}
+
+nav ul li:last-child {
+    border-bottom: none;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px 15px;
+}
+
+nav ul li a:hover {
+    background-color: #004080;
+}
+
+/* Titre principal */
+.title-container {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.title-container h1 {
+    font-size: 24px;
+    border: 2px solid white;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: #004080;
+}
+
+/* Grille des graines */
+.graines-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.graine-item {
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #004080;
+    transition: transform 0.3s;
+}
+
+.graine-item img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.graine-item p {
+    margin: 0;
+}
+
+.graine-item:hover {
+    transform: scale(1.05);
+}
+
+/* Verrouillage */
+.locked {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.unlocked {
+    opacity: 1;
+    pointer-events: auto;
+}
