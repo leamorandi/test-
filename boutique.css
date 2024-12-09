@@ -1,0 +1,148 @@
+/* Général */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #003366, #006699);
+    color: white;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: #00264d;
+}
+
+header .logo img {
+    height: 40px;
+}
+
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+header nav ul li a.active {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+/* Catégories */
+.category {
+    margin: 20px 0;
+}
+
+.category h2 {
+    font-size: 1.5rem;
+    background: #004080;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.carousel {
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    padding: 10px;
+    gap: 10px;
+    scrollbar-width: none; /* For Firefox */
+}
+
+.carousel::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Edge */
+}
+
+.item {
+    flex: 0 0 auto;
+    width: 120px;
+    background: #0059b3;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.item img {
+    width: 100px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.item:hover {
+    transform: scale(1.1);
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #004080;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 80%;
+    max-width: 400px;
+}
+
+.modal-content .close {
+    float: right;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+input[type="number"] {
+    padding: 10px;
+    margin: 10px 0;
+    width: 50%;
+    border-radius: 5px;
+    border: none;
+}
+
+button {
+    background: #00cc66;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button:hover {
+    background: #00994d;
+}
