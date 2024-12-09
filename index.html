@@ -1,50 +1,53 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page de Connexion</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruits</title>
+    <link rel="stylesheet" href="fruits.css">
 </head>
 <body>
-    <!-- Zone de fond -->
-    <div class="background">
-        <!-- Contenu de la page -->
-        <div class="login-container">
-            <!-- Logo SpaceX centré -->
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/SpaceX_Logo.svg/1200px-SpaceX_Logo.svg.png" alt="Logo SpaceX" class="logo">
-
-            <!-- Formulaire de connexion -->
-            <div class="login-form">
-                <div class="input-group">
-                    <label for="email">Identifiant</label>
-                    <input type="email" id="email" placeholder="chiara.destal@gmail.com">
-                    <span class="emoji">📧</span>
-                </div>
-
-                <div class="input-group">
-                    <label for="password">Mot de passe</label>
-                    <input type="password" id="password" placeholder="services">
-                    <span class="emoji">🔑</span>
-                </div>
-
-                <!-- Message d'erreur -->
-                <div id="error-message" class="error-message"></div>
-
-                <!-- Bouton se connecter -->
-                <button id="login-btn">Entrer</button>
-            </div>
-        </div>
-
-        <!-- Vidéo cachée au début -->
-        <div id="video-container" class="video-container">
-            <video id="intro-video" width="100%" height="auto" autoplay muted>
-                <source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4">
-                Votre navigateur ne supporte pas la vidéo HTML5.
-            </video>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
+    <header>
+        <img src="profile-icon.png" alt="Profil" class="profile-icon">
+        <div class="menu-icon"></div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="boutique.html">Boutique</a></li>
+            <li><a href="mars.html">Mars</a></li>
+            <li><a href="prochain-voyage.html">Prochain Voyage</a></li>
+        </ul>
+    </nav>
+    <div class="title-container">
+        <h1>Fruits</h1>
+    </div>
+    <div class="fruits-grid">
+        <div class="fruit-item unlocked">
+            <img src="apple.png" alt="Pomme">
+            <p>Pomme</p>
+        </div>
+        <div class="fruit-item unlocked">
+            <img src="banana.png" alt="Banane">
+            <p>Banane</p>
+        </div>
+        <div class="fruit-item unlocked">
+            <img src="orange.png" alt="Orange">
+            <p>Orange</p>
+        </div>
+        <div class="fruit-item locked">
+            <img src="strawberry.png" alt="Fraise">
+            <p>Fraise</p>
+        </div>
+        <div class="fruit-item locked">
+            <img src="cherry.png" alt="Cerise">
+            <p>Cerise</p>
+        </div>
+        <div class="fruit-item locked">
+            <img src="grape.png" alt="Raisin">
+            <p>Raisin</p>
+        </div>
+    </div>
 </body>
+<script src="fruits.js"></script>
 </html>
