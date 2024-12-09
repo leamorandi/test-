@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boutique</title>
+    <link rel="stylesheet" href="boutique.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="dashboard.html">Accueil</a></li>
+                <li><a href="boutique.html" class="active">Boutique</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Boutique</h1>
+
+        <!-- Section des Légumes -->
+        <div class="category">
+            <h2>Légumes</h2>
+            <div class="carousel">
+                <div class="item" onclick="openPurchaseModal('Carotte', 2)">
+                    <img src="images/legumes/carotte.png" alt="Carotte">
+                    <p>Carotte</p>
+                    <p>2€</p>
+                </div>
+                <div class="item" onclick="openPurchaseModal('Courgette', 4)">
+                    <img src="images/legumes/courgette.png" alt="Courgette">
+                    <p>Courgette</p>
+                    <p>4€</p>
+                </div>
+                <div class="item" onclick="openPurchaseModal('Pomme de Terre', 3)">
+                    <img src="images/legumes/pomme_de_terre.png" alt="Pomme de Terre">
+                    <p>Pomme de Terre</p>
+                    <p>3€</p>
+                </div>
+                <div class="item" onclick="openPurchaseModal('Petit Pois', 5)">
+                    <img src="images/legumes/petit_pois.png" alt="Petit Pois">
+                    <p>Petit Pois</p>
+                    <p>5€</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section des Fruits -->
+        <div class="category">
+            <h2>Fruits</h2>
+            <div class="carousel">
+                <div class="item" onclick="openPurchaseModal('Fraise', 6)">
+                    <img src="images/fruits/fraise.png" alt="Fraise">
+                    <p>Fraise</p>
+                    <p>6€</p>
+                </div>
+                <div class="item" onclick="openPurchaseModal('Pomme', 3)">
+                    <img src="images/fruits/pomme.png" alt="Pomme">
+                    <p>Pomme</p>
+                    <p>3€</p>
+                </div>
+                <div class="item" onclick="openPurchaseModal('Banane', 4)">
+                    <img src="images/fruits/banane.png" alt="Banane">
+                    <p>Banane</p>
+                    <p>4€</p>
+                </div>
+                <div class="item" onclick="openPurchaseModal('Orange', 5)">
+                    <img src="images/fruits/orange.png" alt="Orange">
+                    <p>Orange</p>
+                    <p>5€</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section des Graines -->
+        <div class="category">
+            <h2>Graines</h2>
+            <div class="carousel">
+                <div class="item" onclick="openPurchaseModal('Tournesol', 5)">
+                    <img src="images/graines/tournesol.png" alt="Tournesol">
+                    <p>Tournesol</p>
+                    <p>5€</p>
+                </div>
+                <div class="item" onclick="openPurchaseModal('Basilic', 3)">
+                    <img src="images/graines/basilic.png" alt="Basilic">
+                    <p>Basilic</p>
+                    <p>3€</p>
+                </div>
+                <div class="item" onclick="openPurchaseModal('Blé', 1)">
+                    <img src="images/graines/ble.png" alt="Blé">
+                    <p>Blé</p>
+                    <p>1€</p>
+                </div>
+                <div class="item" onclick="openPurchaseModal('Lin', 4)">
+                    <img src="images/graines/lin.png" alt="Lin">
+                    <p>Lin</p>
+                    <p>4€</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modale d'achat -->
+    <div id="purchase-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closePurchaseModal()">&times;</span>
+            <h2 id="modal-title">Acheter : </h2>
+            <p id="modal-price"></p>
+            <p>Quantité :</p>
+            <input type="number" id="quantity" min="1" placeholder="Entrez la quantité">
+            <button id="confirm-purchase">Confirmer l'achat</button>
+        </div>
+    </div>
+
+    <script src="boutique.js"></script>
+</body>
+</html>
