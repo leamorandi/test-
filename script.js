@@ -1,25 +1,20 @@
-document.getElementById('login-btn').addEventListener('click', function() {
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
-    const errorMessage = document.getElementById('error-message');
+// Gestion du menu déroulant
+const menuIcon = document.querySelector('.menu-icon');
+const nav = document.querySelector('nav');
 
-    // Identifiants et mot de passe corrects
-    const validEmail = 'chiara.destal@gmail.com';
-    const validPassword = 'services';
+menuIcon.addEventListener('click', () => {
+    if (nav.style.display === 'block') {
+        nav.style.display = 'none';
+    } else {
+        nav.style.display = 'block';
+    }
+});
 
-    // Vérification des identifiants
-    if (email === validEmail && password === validPassword) {
-        // Si les identifiants sont bons, on cache le formulaire et on montre la vidéo
-        document.querySelector('.login-container').classList.add('fade-out');
-        document.getElementById('video-container').style.display = 'block';
-        document.getElementById('video-container').classList.add('fade-in');
+// Gestion du clic sur les fruits (exemple)
+const fruits = document.querySelectorAll('.fruit-item.unlocked');
 
-        // Attendre 5 secondes avant de rediriger vers la page dashboard
-        setTimeout(function() {
-            window.location.href = 'dashboard.html';  // Redirection vers la page dashboard
-        }, 5000);
-    } else {
-        // Afficher un message d'erreur si les identifiants sont incorrects
-        errorMessage.textContent = 'Identifiant ou mot de passe incorrect';
-    }
+fruits.forEach(fruit => {
+    fruit.addEventListener('click', () => {
+        alert(`Vous avez sélectionné ${fruit.querySelector('p').textContent}!`);
+    });
 });
