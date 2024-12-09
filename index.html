@@ -1,53 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fruits</title>
-    <link rel="stylesheet" href="fruits.css">
+    <title>Page de connexion</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <img src="profile-icon.png" alt="Profil" class="profile-icon">
-        <div class="menu-icon"></div>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="dashboard.html">Dashboard</a></li>
-            <li><a href="boutique.html">Boutique</a></li>
-            <li><a href="mars.html">Mars</a></li>
-            <li><a href="prochain-voyage.html">Prochain Voyage</a></li>
-        </ul>
-    </nav>
-    <div class="title-container">
-        <h1>Fruits</h1>
-    </div>
-    <div class="fruits-grid">
-        <div class="fruit-item unlocked">
-            <img src="apple.png" alt="Pomme">
-            <p>Pomme</p>
-        </div>
-        <div class="fruit-item unlocked">
-            <img src="banana.png" alt="Banane">
-            <p>Banane</p>
-        </div>
-        <div class="fruit-item unlocked">
-            <img src="orange.png" alt="Orange">
-            <p>Orange</p>
-        </div>
-        <div class="fruit-item locked">
-            <img src="strawberry.png" alt="Fraise">
-            <p>Fraise</p>
-        </div>
-        <div class="fruit-item locked">
-            <img src="cherry.png" alt="Cerise">
-            <p>Cerise</p>
-        </div>
-        <div class="fruit-item locked">
-            <img src="grape.png" alt="Raisin">
-            <p>Raisin</p>
+    <div class="container">
+        <!-- Emplacement de l'image -->
+        <img src="image.jpg" alt="Logo" class="logo">
+
+        <!-- Formulaire -->
+        <div class="form-container">
+            <form id="login-form">
+                <div class="input-group">
+                    <label for="email">
+                        <img src="user-icon.png" alt="Icône utilisateur" class="icon">
+                    </label>
+                    <input type="email" id="email" placeholder="Identifiant" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">
+                        <img src="lock-icon.png" alt="Icône mot de passe" class="icon">
+                    </label>
+                    <input type="password" id="password" placeholder="Mot de passe" required>
+                </div>
+                <button type="button" id="login-button">ENTRER</button>
+            </form>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
-<script src="fruits.js"></script>
 </html>
