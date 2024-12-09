@@ -3,8 +3,13 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to bottom, #4a90e2, #002f6c);
+    background-color: #4a90e2; /* Couleur de fond uniforme */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     color: #fff;
+    text-align: center;
 }
 
 header {
