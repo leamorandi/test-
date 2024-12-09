@@ -1,51 +1,50 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page de connexion</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page de Connexion</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Conteneur principal avec image de fond -->
-    <div class="container" style="background-image:url('fond page d'accueil.png');">
-        <!-- Menu déroulant en haut à droite -->
-        <div class="menu">
-            <select id="menu-dropdown">
-                <option value="option1">Option 1</option>
-                <option value="option2">Option 2</option>
-                <option value="option3">Option 3</option>
-            </select>
-        </div>
+    <!-- Zone de fond -->
+    <div class="background">
+        <!-- Contenu de la page -->
+        <div class="login-container">
+            <!-- Logo SpaceX centré -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/SpaceX_Logo.svg/1200px-SpaceX_Logo.svg.png" alt="Logo SpaceX" class="logo">
 
-        <!-- Contenu principal de la page -->
-        <div class="from-container">
-            <form id="login-form">
-                <div class="input-group">
-                    <label for="email">
-                        <img src="user-icon.png" alt="Icône utilisateur" class="icon">
-                    </label>
-                    <input type="email" id="email" placeholder="Identifiant" required>
-                </div>
-                <div class="input-group">
-                    <label for="password">
-                        <img src="lock-icon.png" alt="Icône mot de passe" class="icon">
-                    </label>
-                    <input type="password" id="password" placeholder="Mot de passe" required>
-                </div>
-                <button type="button" id="login-button">ENTRER</button>
-            </form>
-        </div>
-    </div>
+            <!-- Formulaire de connexion -->
+            <div class="login-form">
+                <div class="input-group">
+                    <label for="email">Identifiant</label>
+                    <input type="email" id="email" placeholder="chiara.destal@gmail.com">
+                    <span class="emoji">📧</span>
+                </div>
 
-    <!-- Conteneur de la vidéo cachée -->
-    <div id="videoContainer" style="display:none;">
-        <video id="connexionVideo" width="100%" height="100%" autoplay>
-            <source src="video 1 page.mp4" type="video/mp4">
-            Votre navigateur ne supporte pas la vidéo.
-        </video>
-    </div>
+                <div class="input-group">
+                    <label for="password">Mot de passe</label>
+                    <input type="password" id="password" placeholder="services">
+                    <span class="emoji">🔑</span>
+                </div>
 
-    <script src="script.js"></script>
+                <!-- Message d'erreur -->
+                <div id="error-message" class="error-message"></div>
+
+                <!-- Bouton se connecter -->
+                <button id="login-btn">Entrer</button>
+            </div>
+        </div>
+
+        <!-- Vidéo cachée au début -->
+        <div id="video-container" class="video-container">
+            <video id="intro-video" width="100%" height="auto" autoplay muted>
+                <source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4">
+                Votre navigateur ne supporte pas la vidéo HTML5.
+            </video>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
