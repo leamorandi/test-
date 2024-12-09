@@ -1,112 +1,126 @@
-/* Mise en forme générale */
-* {
+/* Styles généraux */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #003366;
+    color: white;
+}
+
+/* Header */
+header {
+    background-color: #00254d;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.menu-icon {
+    width: 30px;
+    height: 20px;
+    background: white;
+    mask: url('menu-icon.svg') no-repeat center;
+    -webkit-mask: url('menu-icon.svg') no-repeat center;
+    cursor: pointer;
+}
+
+/* Menu déroulant */
+nav {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background-color: #00254d;
+    border: 1px solid #004080;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
 }
 
-body {
-    background: url('https://via.placeholder.com/1500x800') no-repeat center center fixed;
-    background-size: cover;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+nav ul li {
+    border-bottom: 1px solid #004080;
 }
 
-/* Conteneur de connexion */
-.login-container {
-    position: relative;
+nav ul li:last-child {
+    border-bottom: none;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px 15px;
+}
+
+nav ul li a:hover {
+    background-color: #004080;
+}
+
+/* Titre principal */
+.title-container {
     text-align: center;
-    color: white;
-    z-index: 1;
+    padding: 20px 0;
 }
 
-/* Logo SpaceX */
-.logo {
-    width: 200px;
-    margin-bottom: 40px;
-}
-
-/* Formulaire de connexion */
-.login-form {
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 20px;
-    border-radius: 8px;
-    display: inline-block;
-}
-
-/* Groupes de champs de saisie */
-.input-group {
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* Style des champs de saisie */
-input {
-    padding: 10px;
-    width: 250px;
-    margin-left: 10px;
-    border: 1px solid #fff;
-    border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.2);
-    color: white;
-}
-
-input:focus {
-    outline: none;
-    border-color: #00d2d2;
-}
-
-/* Emoji à côté des champs */
-.emoji {
+.title-container h1 {
     font-size: 24px;
-}
-
-/* Message d'erreur */
-.error-message {
-    color: red;
-    font-size: 14px;
-    margin-top: 10px;
-}
-
-/* Bouton Entrer */
-button {
-    background-color: #00d2d2;
-    color: white;
+    border: 2px solid white;
+    display: inline-block;
     padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
+    border-radius: 10px;
+    background-color: #004080;
 }
 
-button:hover {
-    background-color: #009999;
+/* Grille des fruits */
+.fruits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    max-width: 90%;
+    margin: 0 auto;
 }
 
-/* Vidéo cachée */
-.video-container {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 2;
+.fruit-item {
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #004080;
+    transition: transform 0.3s;
 }
 
-/* Animation de disparition */
-.fade-out {
-    opacity: 0;
-    transition: opacity 1s ease;
+.fruit-item img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
 }
 
-.fade-in {
+.fruit-item p {
+    margin: 0;
+}
+
+.fruit-item:hover {
+    transform: scale(1.05);
+}
+
+/* Verrouillage */
+.locked {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.unlocked {
     opacity: 1;
-    transition: opacity 1s ease;
+    pointer-events: auto;
 }
