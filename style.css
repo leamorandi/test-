@@ -30,6 +30,7 @@ body {
 .form-container {
     display: flex;
     flex-direction: column;
+    opacity: 0.5;
 }
 
 /* Groupe de champs */
