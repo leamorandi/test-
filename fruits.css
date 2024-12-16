@@ -16,8 +16,8 @@ header {
 }
 
 .profile-icon {
-    width: 40px;
-    height: 40px;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
 }
 
@@ -74,7 +74,7 @@ nav ul li a:hover {
 }
 
 .title-container h1 {
-    font-size: 24px;
+    font-size: px;
     border: 2px solid white;
     display: inline-block;
     padding: 10px 20px;
@@ -101,8 +101,8 @@ nav ul li a:hover {
 }
 
 .fruit-item img {
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
     margin-bottom: 10px;
 }
 
