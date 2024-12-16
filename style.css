@@ -67,6 +67,7 @@ button {
     font-size: 18px;
     cursor: pointer;
     transition: background 0.3s;
+    opacity: 0.5;
 }
 
 button:hover {
