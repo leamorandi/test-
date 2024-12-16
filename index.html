@@ -5,8 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page de connexion</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+          <style>
+        /* Style pour la vidéo de fond */
+        .background-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Assure que la vidéo couvre tout l'écran */
+            z-index: -1; /* Place la vidéo derrière le contenu */
+        }
+
+        /* Style général */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #fff;
+            text-align: center;
+            overflow: hidden; /* Empêche les défilements */
+        }
+
+    </style>
 </head>
 <body>
+
+        <video class="background-video" autoplay muted loop>
+        <source src="designservice/video.mp4" type="video/mp4">
+        Votre navigateur ne supporte pas les vidéos HTML5.
+    </video>
     <div class="container">
         <!-- Emplacement de l'image -->
         <img src="designservice/Logo_Blanc_.png" alt="Logo" class="logo">
